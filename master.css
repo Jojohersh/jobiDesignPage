@@ -22,7 +22,6 @@ body {
   background-color: var(--bg-color);
   font-family: var(--minor-font), sans-serif;
   color: var(--light-text);
-  /* font-size: 1rem; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   display: grid;
-  grid-template-columns: auto 1fr fit-content(45%);
+  grid-template-columns: 25% 1fr fit-content(45%);
 }
 div.hidden {
   display: none;
