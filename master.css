@@ -4,8 +4,8 @@
 }
 :root {
   --dark-text: #1e1e1e;
-  --bg-color---old: #d3d06e;
   --bg-color: #d39700;
+  --bg-color-darker: #ac7b00;
   --light-text: white;
   --shadow: #493c2d;
   --highlight: #837b8c;
@@ -31,13 +31,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-  height: 100vh;
-  width: 100vw;
   display: grid;
   grid-template-columns: auto 1fr fit-content(45%);
-  /* grid-template-rows: repeat(4,25%); */
-  grid-template-rows: 1fr auto 1fr auto 1fr;
-  overflow: hidden;
+}
+div.hidden {
+  display: none;
+}
+#content {
+  grid-column: 3/4;
 }
 #about {
   grid-column-start: 3;
@@ -73,39 +74,29 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(-90deg);
 }
 
-h1 {
-  text-shadow: 2px 2px var(--shadow);
-  margin: 0;
-  height: 100%;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  text-transform: uppercase;
-}
-
 .section {
-  min-width: min-content;
-  min-height: min-content;
+  background-color: var(--bg-color-darker);
   display: flex;
   flex-direction: row;
   border-top: 5px solid var(--line-color);
   padding: calc(10px + 1vh);
-}
-
-.section p {
-  /* font-size: calc(16px + 1.7vh); */
-  font-size: calc(0.8em + 1vmin);
-  margin: 0;
-  padding: inherit;
+  margin: 30px 0;
   text-shadow: 1px 0px var(--shadow),
     -1px -0px var(--highlight);
 }
 
+.section p {
+  font-size: calc(0.8em + 1vmin);
+  margin: 0;
+  padding: inherit;
+
+}
+
 .section h2 {
-  height: min-content;
-  width: min-content;
   font-family: var(--major-font), sans-serif;
   font-size: calc(1.1em + 1vw);
   writing-mode: vertical-rl;
+  text-align: right;
   transform-origin: 50% 50%;
   transform: rotate(-180deg);
   color: var(--dark-text);
@@ -128,9 +119,6 @@ h1 {
 .section a {
   display: flex;
   color: var(--light-text);
-  text-shadow: 1px 1px var(--highlight),
-    -1px 1px var(--shadow),
-    0px 2px var(--dark-text);
   text-decoration: none;
   transition: all 0.4s;
   font-size: calc(0.8em + 2vmin)
