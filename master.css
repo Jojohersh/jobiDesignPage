@@ -39,16 +39,6 @@ div.hidden {
 #content {
   grid-column: 3/4;
 }
-#about {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row: 2/3;
-}
-#projects {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row: 4/5;
-}
 
 .JOBI {
   display: flex;
