@@ -19,6 +19,8 @@
 
 body {
   margin: 0;
+  padding: 0;
+  height: 100vh;
   background-color: var(--bg-color);
   font-family: var(--minor-font), sans-serif;
   color: var(--light-text);
@@ -42,8 +44,6 @@ div.hidden {
 
 .JOBI {
   display: flex;
-  grid-row-start: 1;
-  grid-row-end: 5;
   height: 100vh;
   flex-direction: column-reverse;
   justify-content: space-evenly;
